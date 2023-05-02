@@ -1,0 +1,27 @@
+.slick-next:before,
+.slick-prev:before {
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #fff;
+}
+.slick-next:before:hover,
+.slick-prev:before:hover {
+  color: #ffba00 !important;
+  /* background: transparent !important; */
+}
+/* .custom-prev-arrow{
+    background-color: #ffba00 !important;
+} */
+.slick-arrow, .slick-prev{
+color: #ffba00 !important;
+/* background: #ffba00 !important; */
+}
+.logo-hover{
+    opacity: .5 !important;
+}
+.logo-hover:hover{
+    /* background: #ffba00 !important; */
+    color: #e6e6e6bb !important;
+    opacity: 1 !important;
+}

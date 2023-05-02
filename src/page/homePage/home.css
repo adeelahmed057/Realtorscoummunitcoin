@@ -1,0 +1,10 @@
+.background-style{
+    background-image: url(../../assets/background-Image/body-bg.png);
+    background-color: #16181d;
+    color: #a1abbd;
+    font-family: "Comfortaa", Arial, "Helvetica Neue", Helvetica, serif, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.63;
+    letter-spacing: -0.001em;
+}

@@ -1,0 +1,37 @@
+.background-Image{
+    background-image: url("../../assets/background-Image/bg-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-crypto {
+  font-size: 5vw;
+  color: white;
+}
+
+.text-blockchain {
+  font-size: 3vw;
+  color: #ffba00;
+}
+
+.btn-detail {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 50px;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: center;
+  line-height: 1;
+  color: #fff;
+  border: 2px solid;
+}
+.btn-detail:hover {
+  color: #ffba00;
+  border: 2px solid #ffba00;
+}
