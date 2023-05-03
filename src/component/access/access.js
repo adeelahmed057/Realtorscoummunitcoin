@@ -1,18 +1,21 @@
 import React from "react";
 import Laptop from "../../assets/images/pc.png";
-import "./access.css"
+import "./access.css";
 
 function Access() {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
-          <div className="crumina-module crumina-featured-block">
+    <div className="access-bg">
+      <div className="container">
+        <div className="row justify-content-center align-items-center">
+          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div className="">
-            <div className="image-block">
-              <img src={Laptop}  className="img-fluid" alt="phone" />
+              <div className="image-block">
+                <img src={Laptop} className="img-fluid" alt="phone" />
+              </div>
             </div>
-            </div>
+          </div>
+
+          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div className="text-block">
               <header className="crumina-module crumina-heading heading--h2 heading--with-decoration">
                 {/* Google Tag Manager */}

@@ -5,8 +5,9 @@
 
 @media (max-width: 768px) {
   .text-title {
-    font-size: 20px;
+    font-size: 30px;
     color: #fff;
+    text-align: center;
   }
 }
 .text-para {
@@ -15,7 +16,7 @@
   text-align: justify;
 }
 .bg2 {
-  padding-top: 100px;
+  /* padding-top: 100px; */
   background-image: url("../../assets/background-Image/icon1.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -80,4 +81,43 @@
   white-space: nowrap;
   background-color: #ffba00;
   transition: width 0.6s ease;
+}
+
+@media (max-width: 500px) {
+  .row-margin {
+    width: auto !important;
+  }
+}
+.bar-bg {
+  background-image: url("../../assets/background-Image/graph.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.progress-text {
+  font-size: 14px;
+}
+.text-token {
+  font-size: 14px;
+  color: #a1abbd;
+  text-align: left;
+}
+.text-value{
+  font-size: 30px;
+  color: #cacaca;
+  font-weight: bolder;
+}
+@media(max-width:600px){
+  .mobile-responsive{
+    display: block !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .text-para{
+    font-size: 15px;
+  }
+  .text-token{
+    margin-top: 40px;
+    text-align: center !important;
+  }
 }

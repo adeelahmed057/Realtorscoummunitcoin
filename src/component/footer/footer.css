@@ -1,0 +1,18 @@
+/* .footer-bg{
+  background-image: url("../../assets/video/473287184.mp4") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.text-footer {
+  font-size: 15px;
+  text-align: center;
+  z-index: 12;
+  position: relative;
+}
+.text-allright {
+  font-size: 14px;
+  font-weight: bolder;
+  color: #fff;
+  z-index: 123;
+}

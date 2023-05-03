@@ -12,7 +12,7 @@ const daySeconds = 86400;
 const timerProps = {
   isPlaying: true,
   size: 120,
-  strokeWidth: 6,
+  strokeWidth: 8,
 };
 
 const renderTime = (dimension, time) => {
@@ -36,11 +36,11 @@ function HurryTo() {
   const daysDuration = days * daySeconds;
   return (
     <div className="container">
-      <div className="row justify-content-center bg2">
+      <div className="row justify-content-center bg2 mt-5 mb-5">
         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-5 mb-5">
           <div className="row">
             <div>
-              <img src={dots} className="img-fluid" width={"10%"} />
+              <img src={dots} className="img-fluid" width={"10%"} alt="" />
             </div>
             <div className="mt-5">
               <h1 className="text-title">
@@ -80,7 +80,85 @@ function HurryTo() {
                 Distribution <br />
                 End in:
               </h1>
-              <div className="App d-flex gap-5 mt-5">
+              <div className="row justify-content-center m-auto">
+                <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 mt-3 row-margin">
+                  <CountdownCircleTimer
+                    {...timerProps}
+                    colors="#ffba00"
+                    duration={daysDuration}
+                    initialRemainingTime={remainingTime}
+                  >
+                    {({ elapsedTime, color }) => (
+                      <span style={{ color }}>
+                        {renderTime(
+                          "days",
+                          getTimeDays(daysDuration - elapsedTime)
+                        )}
+                      </span>
+                    )}
+                  </CountdownCircleTimer>
+                </div>
+                <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 mt-3 row-margin">
+                  <CountdownCircleTimer
+                    {...timerProps}
+                    colors="#ffba00"
+                    duration={daySeconds}
+                    initialRemainingTime={remainingTime % daySeconds}
+                    onComplete={(totalElapsedTime) => ({
+                      shouldRepeat:
+                        remainingTime - totalElapsedTime > hourSeconds,
+                    })}
+                  >
+                    {({ elapsedTime, color }) => (
+                      <span style={{ color }}>
+                        {renderTime(
+                          "hours",
+                          getTimeHours(daySeconds - elapsedTime)
+                        )}
+                      </span>
+                    )}
+                  </CountdownCircleTimer>
+                </div>
+                <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 mt-3 row-margin">
+                  <CountdownCircleTimer
+                    {...timerProps}
+                    colors="#ffba00"
+                    duration={hourSeconds}
+                    initialRemainingTime={remainingTime % hourSeconds}
+                    onComplete={(totalElapsedTime) => ({
+                      shouldRepeat:
+                        remainingTime - totalElapsedTime > minuteSeconds,
+                    })}
+                  >
+                    {({ elapsedTime, color }) => (
+                      <span style={{ color }}>
+                        {renderTime(
+                          "minutes",
+                          getTimeMinutes(hourSeconds - elapsedTime)
+                        )}
+                      </span>
+                    )}
+                  </CountdownCircleTimer>
+                </div>
+                <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 mt-3 row-margin">
+                  <CountdownCircleTimer
+                    {...timerProps}
+                    colors="#ffba00"
+                    duration={minuteSeconds}
+                    initialRemainingTime={remainingTime % minuteSeconds}
+                    onComplete={(totalElapsedTime) => ({
+                      shouldRepeat: remainingTime - totalElapsedTime > 0,
+                    })}
+                  >
+                    {({ elapsedTime, color }) => (
+                      <span style={{ color }}>
+                        {renderTime("seconds", getTimeSeconds(elapsedTime))}
+                      </span>
+                    )}
+                  </CountdownCircleTimer>
+                </div>
+              </div>
+              {/* <div className="App d-flex gap-5 mt-5">
                 <CountdownCircleTimer
                   {...timerProps}
                   colors="#ffba00"
@@ -149,17 +227,44 @@ function HurryTo() {
                     </span>
                   )}
                 </CountdownCircleTimer>
+              </div> */}
+
+              <div className="bar-bg m-md-5">
+                <div className="text-center mt-5 mb-5">
+                  <button
+                    className="btn btn-success p-3"
+                    style={{ borderRadius: "50px" }}
+                  >
+                    <b>Buy RCC tokens</b>
+                  </button>
+                </div>
+                <div className="d-flex justify-content-between progress-text">
+                  <h1 className="progress-text text-white">$6M</h1>
+                  <h1 className="progress-text" style={{ color: "#ffba00" }}>
+                    50m
+                  </h1>
+                </div>
+                <div class="progress ">
+                  <div class="progress-bar" role="progressbar"></div>
+                </div>
+                <div className="d-flex justify-content-between mt-2">
+                  <h1 className="progress-text" style={{ color: "#a1abbd" }}>
+                    Softcap in 976 days
+                  </h1>
+                  <h1 className="progress-text" style={{ color: "#a1abbd" }}>
+                    Hardcap
+                  </h1>
+                </div>
               </div>
-              <div className="text-center mt-5">
-                <button
-                  className="btn btn-success p-3"
-                  style={{ borderRadius: "50px" }}
-                >
-                  <b>Buy RCC tokens</b>
-                </button>
-              </div>
-              <div class="progress mt-4 mt-md-5">
-                <div class="progress-bar" role="progressbar">
+
+              <div className="d-flex justify-content-between m-5 mobile-responsive">
+                <div className="">
+                  <h4 className="text-token">Token Price:</h4>
+                  <h4 className="text-value">$0.0023</h4>
+                </div>
+                <div>
+                  <h4 className="text-token">Total RCC Tokens:</h4>
+                  <h4 className="text-value">6803.0122</h4>
                 </div>
               </div>
             </div>

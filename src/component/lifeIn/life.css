@@ -47,3 +47,23 @@
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
+@media(max-width:600px){
+  .text-life{
+    font-size: 25px;
+  }
+  .text-counter {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffba00;
+  }
+  .text-marketPrice {
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+  }
+  .text-claritas {
+    font-size: 15px;
+    color: #ffffff57;
+    text-align: center;
+  }
+}

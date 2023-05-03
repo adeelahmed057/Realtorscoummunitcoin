@@ -1,13 +1,14 @@
 import React from "react";
 import "./topFive.css";
 import PhonePicture from "../../assets/images/phone.png";
-
+import { FaGooglePlay } from "react-icons/fa";
 import { AiFillApple } from "react-icons/ai";
+
 function TopFive() {
   return (
     <div className="container">
-      <div className="row  justify-content-center align-items-center mt-5 mb-5">
-        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+      <div className="row  justify-content-center align-items-center mt-5 mb-5 top-bg">
+        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-3">
           <h6 className="text-top5">Top-5 cryptocurrencies</h6>
           <h1 className="text-statistics">Statistics of currencies</h1>
           <h1 className="text-statistics">
@@ -37,18 +38,18 @@ function TopFive() {
               </button>
               <button className="btn btn-download2 me-3" type="button">
                 <div>
-                  <AiFillApple className="icon" />
+                  <FaGooglePlay className="icon" />
                 </div>
                 <div className="m-auto">
                   <p className="text-download">Download on</p>
-                  <p className="text-store">Appstore </p>
+                  <p className="text-store">Playstore </p>
                 </div>
               </button>
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-          <img src={PhonePicture} className="img-fluid" />
+        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-3">
+          <img src={PhonePicture} className="img-fluid"  alt="" />
         </div>
       </div>
     </div>

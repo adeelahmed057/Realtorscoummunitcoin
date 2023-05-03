@@ -1,19 +1,25 @@
 .text-top5 {
   letter-spacing: 0.8rem;
   color: #ffba00;
-  font-size: 1.2vw;
+  font-size: 20px;
 }
+/* .top-bg{
+  background-image: url("../../assets/background-Image/protfolio.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  
+} */
 .text-statistics {
   margin-top: 20px;
   color: #fff;
-  font-size: 3.2vw;
+  font-size: 30px;
 }
 .text-Inverstigation {
-  font-size: 1.2vw;
+  font-size: 20px;
   text-align: justify;
 }
 .text-Inverstigation2 {
-  font-size: 1vw;
+  font-size: 18px;
   text-align: justify;
   color: #ffffff73;
 }
@@ -66,4 +72,32 @@
 .btn-download2:hover {
   border: 1px solid #fff;
   color: #fff;
+}
+
+@media(max-width:1000px){
+  .text-top5 {
+    letter-spacing: 0.4rem;
+    color: #ffba00;
+    font-size: 15px;
+    text-align: center;
+  }
+  .text-statistics {
+   text-align: center;
+  }
+}
+@media(max-width:1000px){
+  .text-top5 {
+    letter-spacing: 0.4rem;
+    color: #ffba00;
+    font-size: 15px;
+    text-align: center;
+  }
+  .text-statistics {
+   text-align: center;
+   font-size: 25px;
+  }
+  .text-Inverstigation, .text-Inverstigation2 {
+    font-size: 15px;
+    text-align: justify;
+  }
 }

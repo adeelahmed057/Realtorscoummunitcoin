@@ -1,3 +1,9 @@
+.access-bg{
+  background-image: url("../../assets/background-Image/bg-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .crumina-featured-block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -58,29 +64,25 @@
     align-items: center;
   }
 }
-/* @media (max-width: 800px) {
-  .crumina-featured-block .text-block,
-  .image-block {
-    width: 100%;
-    margin-left: 0px !important;
-  }
-  .crumina-heading {
-    text-align: center;
-    font-size: 30px;
-  }
-}
-@media (max-width: 800px) {
-  .crumina-featured-block .text-block,
-  .image-block {
-    width: 100%;
-    margin-left: 0px !important;
-  }
-  .crumina-heading {
-    text-align: center;
-    font-size: 20px;
+@media(max-width:1024px){
+  .crumina-featured-block .image-block{
+    width: 100% !important;
   }
   .weight-normal {
-    font-weight: 400;
     font-size: 30px;
+}
+}
+@media(max-width:600px){
+  @media(max-width:1024px){
+    .crumina-featured-block .image-block{
+      width: 100% !important;
+    }
+    .weight-normal {
+      font-size: 30px;
+      text-align: center;
   }
-} */
+  .heading-text{
+    text-align: center;
+  }
+  }
+}

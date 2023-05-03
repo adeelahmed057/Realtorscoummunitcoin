@@ -18,10 +18,20 @@ color: #ffba00 !important;
 /* background: #ffba00 !important; */
 }
 .logo-hover{
-    opacity: .5 !important;
+    opacity:0.6 !important;
 }
 .logo-hover:hover{
     /* background: #ffba00 !important; */
     color: #e6e6e6bb !important;
     opacity: 1 !important;
+}
+@media(max-width:600px){
+  .slick-slider{
+    display: flex;
+    justify-content: center !important;
+    width: 90% !important;
+  }
+  .logo-hover{
+    width: 90% !important;
+  }
 }

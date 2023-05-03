@@ -1,16 +1,16 @@
-.background-Image{
-    background-image: url("../../assets/background-Image/bg-2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.background-Image {
+  background-image: url("../../assets/background-Image/bg-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .text-crypto {
-  font-size: 5vw;
+  font-size: 100px;
   color: white;
 }
 
 .text-blockchain {
-  font-size: 3vw;
+  font-size: 50px;
   color: #ffba00;
 }
 
@@ -35,3 +35,76 @@
   color: #ffba00;
   border: 2px solid #ffba00;
 }
+@media (max-width: 1366px) {
+  .text-crypto {
+    font-size: 80px;
+    color: white;
+    /* text-align: center; */
+  }
+
+  .text-blockchain {
+    font-size: 40px;
+    /* text-align: center; */
+    color: #ffba00;
+  }
+}
+@media (max-width: 1024px) {
+  .text-crypto {
+    font-size: 60px;
+    color: white;
+    /* text-align: center; */
+  }
+
+  .text-blockchain {
+    font-size: 40px;
+    /* text-align: center; */
+    color: #ffba00;
+  }
+}
+@media (max-width: 940px) {
+  .text-crypto {
+    font-size: 60px;
+    color: white;
+    text-align: center;
+  }
+  .marign-responsive {
+    margin-top: 50px;
+  }
+
+  .text-blockchain {
+    font-size: 40px;
+    text-align: center;
+    color: #ffba00;
+  }
+  .btn-responsive {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .text-crypto {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+  }
+
+  .text-blockchain {
+    font-size: 29px;
+    text-align: center;
+    color: #ffba00;
+  }
+}
+@media (max-width: 768px) {
+  .text-crypto {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+  }
+
+  .text-blockchain {
+    font-size: 20px;
+    text-align: center;
+    color: #ffba00;
+  }
+}
+
